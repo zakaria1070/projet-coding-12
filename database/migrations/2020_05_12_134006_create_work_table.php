@@ -15,6 +15,10 @@ class CreateWorkTable extends Migration
     {
         Schema::create('work', function (Blueprint $table) {
             $table->id();
+            $table->string('img_work');
+            $table->string('titre');
+            $table->text('date');
+            $table->text('description');
             $table->timestamps();
         });
     }

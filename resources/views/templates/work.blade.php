@@ -9,15 +9,19 @@
             </div>
         </div>
         <div class="row">
+            @foreach ($works->shuffle() as $work)
+                
+            
             <div class="col-sm-4 portfolio-box wow fadeInUp">
                 <div class="portfolio-box-image">
                     <img src="assets/img/portfolio/1.jpg" alt="" data-at2x="assets/img/portfolio/1.jpg">
                 </div>
-                <h3><a href="#">Acme branding</a> <i class="fa fa-angle-right"></i></h3>
-                <div class="portfolio-box-date"><i class="fa fa-calendar-o"></i> January 2015</div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+                <h3><a href="#"> {{$work->titre}} </a> <i class="fa fa-angle-right"></i></h3>
+                <div class="portfolio-box-date"><i class="fa fa-calendar-o"></i> {{$work->date}} </div>
+                <p> {{$work->description}} </p>
             </div>
-            <div class="col-sm-4 portfolio-box wow fadeInDown">
+            @endforeach
+            {{-- <div class="col-sm-4 portfolio-box wow fadeInDown">
                 <div class="portfolio-box-image">
                     <img src="assets/img/portfolio/2.jpg" alt="" data-at2x="assets/img/portfolio/2.jpg">
                 </div>
@@ -33,7 +37,8 @@
                 <div class="portfolio-box-date"><i class="fa fa-calendar-o"></i> August 2015</div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
             </div>
-        </div>
+        </div> --}}
+
         <div class="row">
             <div class="col-sm-12 section-bottom-button wow fadeInUp">
                 <a class="btn btn-link-1" href="#">Load more</a>

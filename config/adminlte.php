@@ -238,6 +238,12 @@ return [
             'icon'        => 'far fa-fw fa-file',
            
         ],
+        [
+            'text'        => 'Work',
+            'url'         => '/work',
+            'icon'        => 'far fa-fw fa-file',
+           
+        ],
         
        
         [

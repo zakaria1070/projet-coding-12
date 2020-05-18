@@ -1,10 +1,9 @@
 <?php
 
+use App\Work;
 use Illuminate\Database\Seeder;
-use App\Accueil;
-use Illuminate\Support\Facades\DB;
 
-class AccueilSeeder extends Seeder
+class WorkSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,8 +12,6 @@ class AccueilSeeder extends Seeder
      */
     public function run()
     {
-        factory(Accueil::class,1)->create();
+        factory(Work::class,3)->create();
     }
 }
-
-
