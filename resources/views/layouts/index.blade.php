@@ -36,9 +36,9 @@
     <body>
     
         <!-- Loader -->
-    	<div class="loader">
+    	{{-- <div class="loader">
     		<div class="loader-img"></div>
-    	</div>
+    	</div> --}}
 
 		<!-- Top menu -->
 		<nav class="navbar navbar-inverse navbar-fixed-top navbar-no-bg" role="navigation">
@@ -70,11 +70,12 @@
 					</div>
                 </div>
                 {{-- partie login --}}
-  <div class="flex-center position-ref full-height">
+                
+  {{-- <div class="flex-center position-ref full-height">
     @if (Route::has('login'))
         <div class="top-right links">
             @auth
-                <a href="{{ url('/home') }}">younes</a>
+                <a href="{{ url('/home') }}">administration</a>
             @else
                 <a href="{{ route('login') }}">Login</a>
 
@@ -84,7 +85,7 @@
             @endauth
         </div>
     @endif
-			</div>
+			</div> --}}
         </nav>
         
         @yield('content')

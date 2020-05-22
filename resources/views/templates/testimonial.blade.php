@@ -1,5 +1,5 @@
  <!-- Testimonials -->
- <div class="testimonials-container section-container section-container-image-bg">
+ <div class="testimonials-container section-container section-container-image-bg mb-5">
     <div class="container">
         <div class="row">
             <div class="col-sm-12 testimonials section-description wow fadeIn">
@@ -10,20 +10,20 @@
                 <div role="tabpanel">
                     <!-- Tab panes -->
                     <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane fade in active" id="tab1">
+                        @foreach ($testimonials as $testimonial)
+                        <div role="tabpanel" class="tab-pane fade in active" id="{{'tab'.$testimonial->id}}">
                             <div class="testimonial-image">
-                                <img src="assets/img/testimonials/1.jpg" alt="" data-at2x="assets/img/testimonials/1.jpg">
+                                <img src="{{asset($testimonial->img_testimonial)}}" alt="" data-at2x="assets/img/testimonials/1.jpg">
                             </div>
                             <div class="testimonial-text">
                                 <p>
-                                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. 
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. 
-                                    Lorem ipsum dolor sit amet, consectetur..."<br>
-                                    <a href="#">Lorem Ipsum, dolor.co.uk</a>
+                                {{$testimonial->description}}<br>
+                                <a href="{{'#tab'.$testimonial->id}}"> {{$testimonial->lien}} </a>
                                 </p>
                             </div>
                         </div>
-                        <div role="tabpanel" class="tab-pane fade" id="tab2">
+                        @endforeach
+                        {{-- <div role="tabpanel" class="tab-pane fade" id="tab2">
                             <div class="testimonial-image">
                                 <img src="assets/img/testimonials/2.jpg" alt="" data-at2x="assets/img/testimonials/2.jpg">
                             </div>
@@ -61,10 +61,11 @@
                                     <a href="#">Minim Veniam, nostrud.com</a>
                                 </p>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
+                    <span class="mt-5"> {{$data->links()}} </span>
                     <!-- Nav tabs -->
-                    <ul class="nav nav-tabs" role="tablist">
+                    {{-- <ul class="nav nav-tabs" role="tablist">
                         <li role="presentation" class="active">
                             <a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab"></a>
                         </li>
@@ -77,7 +78,7 @@
                         <li role="presentation">
                             <a href="#tab4" aria-controls="tab4" role="tab" data-toggle="tab"></a>
                         </li>
-                    </ul>
+                    </ul> --}}
                 </div>
             </div>
         </div>

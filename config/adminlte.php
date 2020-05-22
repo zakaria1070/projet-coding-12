@@ -244,6 +244,12 @@ return [
             'icon'        => 'far fa-fw fa-file',
            
         ],
+        [
+            'text'        => 'testimonial',
+            'url'         => '/testimonial',
+            'icon'        => 'far fa-fw fa-file',
+           
+        ],
         
        
         [
